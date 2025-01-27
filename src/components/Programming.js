@@ -5,7 +5,7 @@ import devInPython from './contents/devInPython';
 
 
 
-export default function AI() {
+export default function Programming() {
     return (
         <Box
             sx={{
@@ -17,6 +17,7 @@ export default function AI() {
                 padding: '10px'
             }}
         >
+            {BlogItem(devInPython)}
         </Box>
     );
 }

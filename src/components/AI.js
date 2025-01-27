@@ -13,6 +13,7 @@ import ggufggml from './contents/ggufggml';
 import devInLangChain from './contents/devInLangChain';
 import llmTraining from './contents/llmTraining';
 import smallLLMForFun from './contents/smallLLMForFun';
+import baseVsInstruct from './contents/baseVsInstruct';
 
 export default function AI() {
     return (
@@ -31,7 +32,8 @@ export default function AI() {
             {BlogItem(agi)}
             {BlogItem(ggufggml)}
             {BlogItem(smallLLMForFun)}
-            {BlogItem(llmTraining)}            
+            {BlogItem(llmTraining)}
+            {BlogItem(baseVsInstruct)}             
             {BlogItem(promptTypes)}
             {BlogItem(promptEngineering)}
             {BlogItem(stochasticParrots)}
