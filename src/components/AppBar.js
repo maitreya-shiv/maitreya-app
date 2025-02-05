@@ -10,18 +10,31 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Divider, { dividerClasses } from '@mui/material/Divider';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'AI', 'Chatterbug'];
+const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI', 'Chatterbug'];
 
 export default function ApplicationBar() {
     const navigate = useNavigate();
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
 
-    const handleCloseNavMenu = (event, page) => {
+    const handleOpenNavMenu = (event) => {
+        setAnchorElNav(event.currentTarget);
+    };
+
+    const handleCloseNavMenu = () => {
+        setAnchorElNav(null);
+    };
+
+    const handleMenu = (event, page) => {
         console.log(page)
         if (page == "Chatterbug") {
             navigate("/chatterbug")
         } else if (page == "AI") {
             navigate("/ai")
+        } else if (page == "Programming") {
+            navigate("/programming")
         } else if (page == "Tech") {
             navigate("/tech")
         } else if (page == "Mathematics") {
@@ -42,7 +55,7 @@ export default function ApplicationBar() {
 
     };
 
-    const handleMenu = (event) => {
+    const handleLoginMenu = (event) => {
         alert("Login")
     };
 
@@ -59,7 +72,6 @@ export default function ApplicationBar() {
                         sx={{
                             flexGrow: 1,
                             mr: 2,
-                            display: { xs: 'none', md: 'flex' },
                             fontFamily: 'broadway',
                             fontSize: 25,
                             color: 'inherit',
@@ -68,12 +80,22 @@ export default function ApplicationBar() {
                     >
                         Maitreya
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, flexDirection: 'row-reverse' }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'node', lg: 'flex' }, flexDirection: 'row-reverse' }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleLoginMenu}
+                            color="inherit"
+                        >
+                            <AccountCircle />
+                        </IconButton>
                         {pages.map((page) => (
                             <Box sx={{ display: 'flex', flexDirection: 'row' }}>
                                 <Button
                                     key={page}
-                                    onClick={(evt) => handleCloseNavMenu(evt, page)}
+                                    onClick={(evt) => handleMenu(evt, page)}
                                     sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'broadway' }}
                                 >
                                     {page}
@@ -82,16 +104,43 @@ export default function ApplicationBar() {
                             </Box>
                         ))}
                     </Box>
-                    <IconButton
-                        size="large"
-                        aria-label="account of current user"
-                        aria-controls="menu-appbar"
-                        aria-haspopup="true"
-                        onClick={handleMenu}
-                        color="inherit"
-                    >
-                        <AccountCircle />
-                    </IconButton>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex', lg: 'none' , flexDirection: 'row-reverse'} }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="inherit"
+                        >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                                vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                                vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{ display: { xs: 'block', md: 'none' } }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page} onClick={handleMenu}>
+                                    <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
+                                </MenuItem>
+                            ))}
+                            <MenuItem key={"Login"} onClick={handleLoginMenu}>
+                                <Typography sx={{ textAlign: 'center' }}>{"Login"}</Typography>
+                            </MenuItem>
+                        </Menu>
+                    </Box>
                 </Toolbar>
             </AppBar>
         </Box>

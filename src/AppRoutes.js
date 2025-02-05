@@ -3,13 +3,20 @@ import {Routes,Route} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Tech from './components/Tech';
+import Programming from './components/Programming';
 import ChatterBug from './components/ChatterBug';
 import AI from './components/AI';
 import PromptEngineeringPage from './components/pages/PromptEngineeringPage';
 import FunctionCallingPage from './components/pages/FunctionCallingPage';
 import DevelopmentInPython from './components/pages/DevelopmentInPython';
 import DevelopmentInLangChain from './components/pages/DevelopmentInLangChain';
-import LLMTraining from './components/pages/LLMTraining';
+import LLMTraining from './components/pages/LLMTraining'; 
+import InstructionTuning from './components/pages/InstructionTuning'; 
+import PEFT from './components/pages/PEFT'; 
+import InstallUnsloth from './components/pages/InstallUnsloth';
+import PEFTUsingUnsloth from './components/pages/PEFTUsingUnsloth';
+import Datasets from './components/pages/Datasets';
+import LlamaCpp from './components/pages/LlamaCpp';
 
 const AppRoutes = () => (
     <Routes>
@@ -17,6 +24,7 @@ const AppRoutes = () => (
         <Route exact path="/index.html" element={<Home />} />
         <Route exact path="/chatterbug" element={<ChatterBug />} />
         <Route exact path="/ai" element={<AI />} />
+        <Route exact path="/programming" element={<Programming />} />
         <Route exact path="/tech" element={<Tech />} />
         <Route exact path="/maths" element={<About />} />
         <Route exact path="/science" element={<About />} />
@@ -30,6 +38,12 @@ const AppRoutes = () => (
         <Route exact path="/dev-python" element={<DevelopmentInPython />} />
         <Route exact path="/dev-langchain" element={<DevelopmentInLangChain />} />
         <Route exact path="/llm-training" element={<LLMTraining />} />
+        <Route exact path="/instruct-tuning" element={<InstructionTuning />} />
+        <Route exact path="/peft" element={<PEFT />} />
+        <Route exact path="/install-unsloth" element={<InstallUnsloth />} />
+        <Route exact path="/peft-unsloth" element={<PEFTUsingUnsloth />} />
+        <Route exact path="/data-sets" element={<Datasets />} />
+        <Route exact path="/install-llamacpp" element={<LlamaCpp />} />
     </Routes>
 );
 export default AppRoutes;
