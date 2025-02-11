@@ -127,7 +127,107 @@ const datasetsContent = {
             type: "reference",
             href: "https://ubiai.tools/fine-tune-llama-3-psychology-question-unsloth/",
             text: "What is an LLM Dataset?"
-        }
+        },
+        {
+            type: "reference",
+            href: "https://wandb.ai/capecape/alpaca_ft/reports/How-to-Fine-Tune-an-LLM-Part-1-Preparing-a-Dataset-for-Instruction-Tuning--Vmlldzo1NTcxNzE2",
+            text: "Preparing-a-Dataset-for-Instruction-Tuning"
+        }, 
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/haripritam/function-calling-alpaca",
+            text: "function-calling-alpaca"
+        }, 
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/ceiteach/chart-function-calling-alpaca",
+            text: "chart-function-calling-alpaca"
+        }, 
+        {
+            type: "reference",
+            href: "https://huggingface.co/collections/davanstrien/top-10-instruction-tuning-datasets-650d91e11427d12e8542a21a",
+            text: "top-10-instruction-tuning-datasets"
+        }, 
+        {
+            type: "reference",
+            href: "https://github.com/Zjh-819/LLMDataHub",
+            text: "LLMDataHub"
+        }, 
+        {
+            type: "reference",
+            href: "https://github.com/mlabonne/llm-datasets",
+            text: "llm-datasets"
+        },
+        {
+            type: "reference",
+            href: "https://github.com/jianzhnie/awesome-instruction-datasets",
+            text: "awesome-instruction-datasets"
+        },
+        {
+            type: "reference",
+            href: "https://www.projectpro.io/article/llm-datasets-for-training/1027",
+            text: "llm-datasets-for-training"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/neural-bridge/rag-dataset-12000",
+            text: "rag-dataset"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/Locutusque/function-calling-chatml",
+            text: "function-calling-chatml"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/glaiveai/glaive-function-calling-v2",
+            text: "glaive-function-calling"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/ServiceNow-AI/M2Lingual",
+            text: "M2Lingual"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/CohereForAI/aya_dataset",
+            text: "aya_dataset"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/Vezora/Open-Critic-GPT",
+            text: "Open-Critic-GPT"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/b-mc2/sql-create-context",
+            text: "sql-create-context"
+        },
+        {
+            type: "reference",
+            href: "https://huggingface.co/datasets/gretelai/synthetic_text_to_sql",
+            text: "synthetic_text_to_sql"
+        },
+        {
+            type: "reference",
+            href: "https://www.kaggle.com/datasets/abdelrahmanm2003/albert-einstein-llm-instruction-dataset",
+            text: "albert-einstein-llm-instruction-dataset"
+        },
+        {
+            type: "reference",
+            href: "https://til.simonwillison.net/gpt3/open-api",
+            text: "Generating OpenAPI specifications using GPT-3"
+        },
+        {
+            type: "reference",
+            href: "https://arxiv.org/html/2405.15729v2",
+            text: "OpenAPI Code Completion"
+        },
+        {
+            type: "reference",
+            href: "https://www.analyticsvidhya.com/blog/2024/07/finetuning-phi-medium-to-generate-cypher-query-from-text/",
+            text: "finetuning-phi-medium-to-generate-cypher-query-from-text"
+        },
     ]
 }
 export default datasetsContent;

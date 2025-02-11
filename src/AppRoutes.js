@@ -17,6 +17,9 @@ import InstallUnsloth from './components/pages/InstallUnsloth';
 import PEFTUsingUnsloth from './components/pages/PEFTUsingUnsloth';
 import Datasets from './components/pages/Datasets';
 import LlamaCpp from './components/pages/LlamaCpp';
+import AIAgent from './components/pages/AIAgent';
+import LangChainLangGraphAIAgent from './components/pages/LangChainLangGraphAIAgent';
+import PEFTPhiMini from './components/pages/PEFTPhiMini';
 
 const AppRoutes = () => (
     <Routes>
@@ -44,6 +47,9 @@ const AppRoutes = () => (
         <Route exact path="/peft-unsloth" element={<PEFTUsingUnsloth />} />
         <Route exact path="/data-sets" element={<Datasets />} />
         <Route exact path="/install-llamacpp" element={<LlamaCpp />} />
+        <Route exact path="/ai-agent" element={<AIAgent />} />
+        <Route exact path="/ai-agent-langchain" element={<LangChainLangGraphAIAgent />} />
+        <Route exact path="/tune-phi3.5-mini" element={<PEFTPhiMini />} />
     </Routes>
 );
 export default AppRoutes;

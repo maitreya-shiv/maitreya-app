@@ -13,7 +13,8 @@ import Divider, { dividerClasses } from '@mui/material/Divider';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI', 'Chatterbug'];
+//const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI', 'Chatterbug'];
+const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI'];
 
 export default function ApplicationBar() {
     const navigate = useNavigate();
