@@ -64,6 +64,14 @@ const developmentInPythonContent = {
         },
         {
             type: "header",
+            text: "Optional - Create Virtual Environment Prgramatically" 
+        },
+        {
+            type: "code",
+            code: `python -m venv <virtual-env-name like tutorial-env>`
+        },
+        {
+            type: "header",
             text: "Activate Virtual Environment"
         },
         {
@@ -81,6 +89,14 @@ const developmentInPythonContent = {
         },
         {
             type: "header",
+            text: "Installing Poetry" 
+        },
+        {
+            type: "code",
+            code: `python -m pip install poetry`
+        },
+        {
+            type: "header",
             text: "Installing Dependencies" 
         },
         {
@@ -89,7 +105,7 @@ const developmentInPythonContent = {
         },
         {
             type: "code",
-            code: `poetry install`
+            code: `python -m poetry install`
         },
     ]
 }

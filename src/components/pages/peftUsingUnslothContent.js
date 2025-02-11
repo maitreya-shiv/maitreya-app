@@ -227,16 +227,7 @@ tokenizer.save_pretrained("lora_model")
         },
         {
             type: "text",
-            text: `We need llama.cpp scripts to convert the trained model to GGUF format.`
-        },
-        {
-            type: "link",
-            href: "#/install-llamacpp", 
-            text: "Install Llama.cpp"
-        },
-        {
-            type: "text",
-            text: `By following these steps, you can convert a Hugging Face model to GGUF format and take advantage of the benefits of GGUF for CPU-based deployment of machine learning models. For running the model on local setups use software like ollama, lmstudio, etc gguf file are required. These files help in efficient storage of model and faster inference.`
+            text: `We can finally quantize our model! To do that, we’ll use llama-quantize executable that we previously compiled with other llama.cpp executables.`
         },
         {
             type: "reference",
@@ -244,16 +235,31 @@ tokenizer.save_pretrained("lora_model")
             text: "quantizing-the-model"
         },
         {
+            type: "reference",
+            href: "https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-quantization",
+            text: "a-visual-guide-to-quantization"
+        },
+        {
             type: "code",
-            code: `python llama.cpp/convert-hf-to-gguf.py path/to/llama2 --outtype f16 --outfile llama-2-7b-f16.gguf
-
-# python llama.cpp/convert-hf-to-gguf.py [path to the original model] --outtype [f32, f16, bf16 or q8_0] --outfile [output path]
-
-# llama.cpp/convert-hf-to-gguf.py : the path to the convert-hf-to-gguf.py file. relative to the current directory of the terminal
-# path/to/llama2 : path to the HF model folder. relative to the current directory of the terminal
-# --outfile llama-2-7b-f16.gguf : the ouput file, it need to have the .gguf extension at the end
-# --outtype f16 : the quantization method
+            code: `llama.cpp/build/bin/Release/llama-quantize.exe my_tuned_llm.gguf my_tuned_llm_Q4_K.gguf Q4_K
+# To check what quantizations we have available run - llama-quantize.exe --help
+# Input gguf file - my_tuned_llm.gguf
+# Output gguf file - my_tuned_llm_Q4_K.gguf
+# Quantization method - Q4_K
 `
+        },
+        {
+            type: "header",
+            text: "Tuning Examples"
+        },
+        {
+            type: "link",
+            href: "#/tune-phi3.5-mini",
+            text: "Tune microsoft/Phi-3.5-mini-instruct"
+        },
+        {
+            type: "header",
+            text: "References"
         },
         {
             type: "reference",

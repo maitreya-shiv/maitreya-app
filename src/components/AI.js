@@ -17,6 +17,9 @@ import baseVsInstruct from './contents/baseVsInstruct';
 import llmInstructionTuning from './contents/llmInstructionTuning';
 import peft from './contents/peft';
 import dataSetsForFinetuning from './contents/dataSetsForFinetuning';
+import llmParamters from './contents/llmParamters';
+import modelQuantization from './contents/modelQuantization';
+import aiAgents from './contents/aiAgents';
 
 export default function AI() {
     return (
@@ -34,14 +37,17 @@ export default function AI() {
             {BlogItem(aiTypes)}
             {BlogItem(agi)}
             {BlogItem(ggufggml)}
+            {BlogItem(modelQuantization)}
+            {BlogItem(llmParamters)}
             {BlogItem(smallLLMForFun)}
             {BlogItem(dataSetsForFinetuning)}
             {BlogItem(peft)}            
             {BlogItem(llmInstructionTuning)}
             {BlogItem(llmTraining)}
-            {BlogItem(baseVsInstruct)}             
+            {BlogItem(baseVsInstruct)}           
             {BlogItem(promptTypes)}
             {BlogItem(promptEngineering)}
+            {BlogItem(aiAgents)}
             {BlogItem(stochasticParrots)}
             {BlogItem(llmThinkingModels)}
             {BlogItem(functionCalling)}            
