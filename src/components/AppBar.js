@@ -133,7 +133,7 @@ export default function ApplicationBar() {
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
                             {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleMenu}>
+                                <MenuItem key={page} onClick={(evt) => handleMenu(evt, page)}>
                                     <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                                 </MenuItem>
                             ))}
