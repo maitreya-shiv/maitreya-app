@@ -21,6 +21,48 @@ import llmParamters from './contents/llmParamters';
 import modelQuantization from './contents/modelQuantization';
 import aiAgents from './contents/aiAgents';
 
+
+const item = {
+    header: "Artificial Intelligence",
+    contents: [
+        {
+            text: "What is an AI agent?", href: "#/ai-agent"
+        },
+        {
+            text: "Training LLM Locally", href: "#/llm-training"
+        },
+        {
+            text: "Parameter-Efficient Fine-Tuning", href: "#/peft"
+        },
+        {
+            text: "What is Instruction Tuning in LLM?", href: "#/instruct-tuning"
+        },
+        {
+            text: "Parameter-Efficient Fine-Tuning using unsloth", href: "#/peft-unsloth"
+        },
+        {
+            text: "LLM Datasets for Fine-tuning", href: "#/data-sets"
+        },
+        {
+            text: "Function/Tool callling", href: "#/function-call"
+        },
+        {
+            text: "Intstalling llama.cpp Windows", href: "#/install-llamacpp"
+        },
+        {
+            text: "Intstalling Unsloth on Windows", href: "#/install-unsloth"
+        },
+        {
+            text: "Intstalling Unsloth on Windows", href: "#/install-unsloth"
+        },
+        {
+            text: "How to write effective Prompts", href: "#/prompt"
+        },
+    ]
+}
+
+
+
 export default function AI() {
     return (
         <Box
@@ -33,25 +75,7 @@ export default function AI() {
                 padding: '10px'
             }}
         >
-            {BlogItem(ai)}
-            {BlogItem(aiTypes)}
-            {BlogItem(agi)}
-            {BlogItem(ggufggml)}
-            {BlogItem(modelQuantization)}
-            {BlogItem(llmParamters)}
-            {BlogItem(smallLLMForFun)}
-            {BlogItem(dataSetsForFinetuning)}
-            {BlogItem(peft)}            
-            {BlogItem(llmInstructionTuning)}
-            {BlogItem(llmTraining)}
-            {BlogItem(baseVsInstruct)}           
-            {BlogItem(promptTypes)}
-            {BlogItem(promptEngineering)}
-            {BlogItem(aiAgents)}
-            {BlogItem(stochasticParrots)}
-            {BlogItem(llmThinkingModels)}
-            {BlogItem(functionCalling)}            
-            {BlogItem(devInLangChain)}
+            {BlogItem(item)}
         </Box>
     );
 }

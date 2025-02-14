@@ -132,7 +132,7 @@ export default function ApplicationBar() {
                             onClose={handleCloseNavMenu}
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
-                            {pages.map((page) => (
+                            {pages.reverse().map((page) => (
                                 <MenuItem key={page} onClick={(evt) => handleMenu(evt, page)}>
                                     <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                                 </MenuItem>

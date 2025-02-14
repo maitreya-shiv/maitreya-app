@@ -7,14 +7,13 @@ const userMessageBox = (
     <Box
         sx={{
             width: '60%',
-            height: 150,
             borderRadius: 2,
             bgcolor: '#e4e8ec',
-            marginTop: '40px',
-            marginBottom: '40px',
+            marginTop: '20px',
+            marginBottom: '20px',
             marginLeft: '40px',
             borderRight: '5px solid #1790A6',
-            fontSize: '42px',
+            fontSize: '2.5em',
             padding: '20px',
             color: '#353E47',
             fontFamily: 'broadway',
@@ -29,12 +28,13 @@ const aiMessageBox = (
     <Box
         sx={{
             width: '60%',
-            height: 100,
             borderRadius: 2,
             bgcolor: '#e4e8ec',
+            marginTop: '20px',
+            marginBottom: '20px',
             marginRight: '40px',
             borderLeft: '5px solid #F3AC2B',
-            fontSize: '42px',
+            fontSize: '3em',
             padding: '20px',
             fontFamily: 'broadway',
             color: '#353E47',
@@ -53,14 +53,16 @@ export default function Home() {
             sx={{
                 width: '100%',
                 display: 'flex',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                height:'80%'
             }}
         >
             <Box
                 sx={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'left'
+                    justifyContent: 'left',
+                    flex: 1
                 }}
                 ref={containerRefUser}
             >
@@ -73,7 +75,8 @@ export default function Home() {
                 sx={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'right'
+                    justifyContent: 'right',
+                    flex: 1
                 }}
                 ref={containerRefAI}
             >
