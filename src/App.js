@@ -8,7 +8,7 @@ import './styles/App.css';
 class App extends Component {
     render() {
         return (
-            <div style={{height: "100%"}}>
+            <div style={{height: "100%",'overflow-y': 'scroll', 'overflow-x': 'hidden', 'scrollbar-width': 'none'}}>
                 <HashRouter>
                 <AppBar></AppBar>                
                     <AppRoutes></AppRoutes>

@@ -10,7 +10,7 @@ export default function PageItem(item) {
     let contentItems = []
     if (item.header) {
         contentItems.push(
-            <Typography variant="h4" gutterBottom sx={{ fontFamily: 'broadway', color: '#353E47', marginTop: '10px' }}>{item.header}</Typography>
+            <Typography variant="h5" gutterBottom sx={{ fontFamily: 'broadway', color: '#353E47', marginTop: '10px' }}>{item.header}</Typography>
         )
     }
     if (item.text) {
@@ -88,7 +88,7 @@ export default function PageItem(item) {
     }
 
     return (
-        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', height: '90%', overflow: "scroll", padding: '10px' }}>
+        <Box sx={{ width: '100%', display: 'flex', flexDirection: 'column', height: '90%', overflow: "hidden", padding: '10px' }}>
             {contentItems}
         </Box>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 import Slide from '@mui/material/Slide';
+import HomeCards from './HomeCards';
 
 
 const userMessageBox = (
@@ -53,36 +54,54 @@ export default function Home() {
             sx={{
                 width: '100%',
                 display: 'flex',
-                flexDirection: 'column',
-                height:'80%'
+                flexDirection: 'column'
             }}
         >
             <Box
                 sx={{
                     width: '100%',
                     display: 'flex',
-                    justifyContent: 'left',
-                    flex: 1
+                    flexDirection: 'column',
+                    minHeight: '600px'
                 }}
-                ref={containerRefUser}
             >
-                <Slide in={true} appear={true} direction="right" timeout={500} container={containerRefUser.current}>
-                    {userMessageBox}
-                </Slide>
-            </Box>
+                <Box
+                    sx={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'left',
+                        flex: 1
+                    }}
+                    ref={containerRefUser}
+                >
+                    <Slide in={true} appear={true} direction="right" timeout={500} container={containerRefUser.current}>
+                        {userMessageBox}
+                    </Slide>
+                </Box>
 
+                <Box
+                    sx={{
+                        width: '100%',
+                        display: 'flex',
+                        justifyContent: 'right',
+                        flex: 1
+                    }}
+                    ref={containerRefAI}
+                >
+                    <Slide in={true} appear={true} direction="left" timeout={500} container={containerRefAI.current}>
+                        {aiMessageBox}
+                    </Slide>
+                </Box>
+
+            </Box>
             <Box
                 sx={{
                     width: '100%',
-                    display: 'flex',
-                    justifyContent: 'right',
-                    flex: 1
+                    minHeight: '500px',
+                    backgroundColor: '#2b2c2b'
                 }}
-                ref={containerRefAI}
             >
-                <Slide in={true} appear={true} direction="left" timeout={500} container={containerRefAI.current}>
-                    {aiMessageBox}
-                </Slide>
+                <HomeCards></HomeCards>
             </Box>
         </Box>
     );

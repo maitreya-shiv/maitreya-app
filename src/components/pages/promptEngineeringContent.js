@@ -1,6 +1,6 @@
 const promptEngineeringContent = {
     header: "How to Write Better Prompts?",
-    text: "How to Write Better Prompts?",
+    text: "Prompt engineering is the process of writing prompts to maximize the quality and relevance of the response.",
     contents: [
         {
             type: "header",
