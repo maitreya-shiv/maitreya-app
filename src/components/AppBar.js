@@ -14,8 +14,9 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
 //const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI', 'Chatterbug'];
-const pages = ['About', 'Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI'];
-
+const pages = ['Books', 'Watches', 'History', 'Philosophy', 'Science', 'Mathematics', 'Tech', 'Programming', 'AI'];
+const clonePages = pages.slice()
+clonePages.reverse()
 export default function ApplicationBar() {
     const navigate = useNavigate();
     const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -57,13 +58,13 @@ export default function ApplicationBar() {
     };
 
     const handleLoginMenu = (event) => {
-        alert("Login")
+        navigate("/about")
     };
 
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" sx={{ bgcolor: "#353E47" }}>
+            <AppBar position="static" sx={{ bgcolor: "#202020" }}>
                 <Toolbar>
                     <Typography
                         variant="h6"
@@ -77,7 +78,7 @@ export default function ApplicationBar() {
                             fontSize: 25,
                             color: 'inherit',
                             textDecoration: 'none',
-                        }}
+                                                    }}
                     >
                         Maitreya
                     </Typography>
@@ -132,7 +133,7 @@ export default function ApplicationBar() {
                             onClose={handleCloseNavMenu}
                             sx={{ display: { xs: 'block', md: 'none' } }}
                         >
-                            {pages.reverse().map((page) => (
+                            {clonePages.map((page) => (
                                 <MenuItem key={page} onClick={(evt) => handleMenu(evt, page)}>
                                     <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                                 </MenuItem>

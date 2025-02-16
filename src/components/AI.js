@@ -53,10 +53,16 @@ const item = {
             text: "Intstalling Unsloth on Windows", href: "#/install-unsloth"
         },
         {
-            text: "Intstalling Unsloth on Windows", href: "#/install-unsloth"
+            text: "Tuning microsoft/Phi-3.5-mini-instruct", href: "#/tune-phi3.5-mini"
+        },
+        {
+            text: "AI Agents using Langchain", href: "#/ai-agent-langchain"
         },
         {
             text: "How to write effective Prompts", href: "#/prompt"
+        },
+        {
+            text: "What is GGUF Format?", href: "#/gguf"
         },
     ]
 }
@@ -71,7 +77,6 @@ export default function AI() {
                 display: 'flex',
                 flexDirection: 'column',
                 height: '90%',
-                overflow: "scroll",
                 padding: '10px'
             }}
         >

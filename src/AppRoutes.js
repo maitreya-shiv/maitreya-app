@@ -20,6 +20,8 @@ import LlamaCpp from './components/pages/LlamaCpp';
 import AIAgent from './components/pages/AIAgent';
 import LangChainLangGraphAIAgent from './components/pages/LangChainLangGraphAIAgent';
 import PEFTPhiMini from './components/pages/PEFTPhiMini';
+import GGUFFormat from './components/pages/GGUFFormat';
+import LMFromScratch from './components/pages/LMFromScratch';
 
 const AppRoutes = () => (
     <Routes>
@@ -50,6 +52,8 @@ const AppRoutes = () => (
         <Route exact path="/ai-agent" element={<AIAgent />} />
         <Route exact path="/ai-agent-langchain" element={<LangChainLangGraphAIAgent />} />
         <Route exact path="/tune-phi3.5-mini" element={<PEFTPhiMini />} />
+        <Route exact path="/gguf" element={<GGUFFormat />} />
+        <Route exact path="/create-lm" element={<LMFromScratch />} />
     </Routes>
 );
 export default AppRoutes;
